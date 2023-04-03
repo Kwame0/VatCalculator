@@ -11,7 +11,7 @@ To get started with the VatCalculator project, you'll need to have a few things 
 
 Once you have WAMP/MAMP and Symfony CLI installed, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/yourusername/VatCalculator.git`
+1. Clone this repository: `git clone https://github.com/Kwame0/VatCalculator.git`
 2. Navigate to the project directory: `cd VatCalculator`
 3. Install the project dependencies: `composer install`
 4. Start the Symfony server: `symfony server:start`
