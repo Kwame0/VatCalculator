@@ -1,0 +1,5 @@
+#index:
+# path: /
+# controller: App\Controller\VatController::index
+
+# ANNOtations were used instead of routes
