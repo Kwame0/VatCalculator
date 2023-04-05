@@ -1,36 +1,44 @@
-# VatCalculator
+# VAT Calculator
 
-This is a Symfony-based project designed to help you calculate VAT.
+A simple VAT Calculator built using Symfony and Tailwind CSS. The application allows users to enter a monetary value (V) and a VAT percentage rate (R), then calculates and displays the VAT amounts for both inclusive and exclusive scenarios. The results are stored in a history table, which can be cleared or exported as a CSV file.
+
+## Features
+
+- Calculate VAT for both inclusive and exclusive scenarios
+- Store and display a history of calculations
+- Clear the history table
+- Export the history table as a CSV file
 
 ## Installation
 
-To get started with the VatCalculator project, you'll need to have a few things installed on your system:
+1. Clone the repository:
 
-- [WAMP](https://www.wampserver.com/en/) (for Windows users) or [MAMP](https://www.mamp.info/) (for Mac users)
-- [Symfony CLI](https://symfony.com/download) 
+```git clone https://github.com/yourusername/vat-calculator.git```
 
-Once you have WAMP/MAMP and Symfony CLI installed, follow these steps:
+2. Install the dependencies:
 
-1. Clone this repository: `git clone https://github.com/Kwame0/VatCalculator.git`
-2. Navigate to the project directory: `cd VatCalculator`
-3. Install the project dependencies: `composer install`
-4. Start the Symfony server: `symfony server:start`
-5. Open your browser and navigate to `http://localhost:8000`
+```composer install```
 
-That's it! You should now be able to see the VatCalculator project in action.
+3. Configure your database connection in the `.env` file:
+
+```DATABASE_URL="mysql://db_user:db_password@localhost:3306/db_name"```
+
+4. Create the database and tables:
+
+```bin/console doctrine:database:create```<br>
+```bin/console doctrine:migrations:migrate```
+
+
+5. Start the Symfony server:
+
+```symfony server:start```
+
+6. Open your browser and navigate to [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ## Usage
 
-To use the VatCalculator project, simply enter the invoice amount (excluding VAT) and the VAT rate, and the calculator will show you the total amount including VAT.
+Enter a monetary value (V) and a VAT percentage rate (R). Choose whether the value is inclusive or exclusive of VAT, then click the "Calculate" button to perform the calculation. The results will be displayed in a table, and the history of calculations can be viewed, cleared, or exported as a CSV file.
 
-## Contributing
+## License
 
-If you'd like to contribute to the VatCalculator project, please follow these steps:
-
-1. Fork the project repository
-2. Create a new branch: `git checkout -b my-new-feature`
-3. Make your changes and commit them: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Create a new Pull Request
-
-Thank you for your contributions!
+This project is licensed under the MIT License.
